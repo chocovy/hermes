@@ -140,6 +140,7 @@ Value CrashFunction(
       fprintf(fzliout, "%s\n", outputString.c_str());
     }
     fflush(fzliout);
+    return Value(true);
   } else if (
       String::strictEquals(
           rt, funcString, String::createFromAscii(rt, "FUZZILLI_CRASH")) &&
@@ -151,8 +152,9 @@ Value CrashFunction(
     } else if (crashCode == 1.0) {
       assert(1 == 0);
     }
+    return Value(true);
   }
-  return Value();
+  return Value(false);
 }
 
 class MemoryBuffer : public facebook::jsi::Buffer {
