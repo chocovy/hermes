@@ -13,5 +13,6 @@ if(HERMES_ENABLE_FUZZILLI)
     )
 
     target_include_directories(fuzzilli PRIVATE ${HERMES_SOURCE_DIR}/API)
+    target_compile_options(fuzzilli PRIVATE -fsanitize-coverage=trace-pc-guard)
     target_link_libraries(fuzzilli libhermes)
 endif()
