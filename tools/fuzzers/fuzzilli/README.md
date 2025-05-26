@@ -13,7 +13,7 @@ mv profile/*.swift $FUZZILLI_LOCATION/Sources/FuzzilliCli/Profiles/
 Build Instrumented Binary
 ```shell
 mkdir fuzzilli_build && cd fuzzilli_build
-cmake .. -DHERMES_ENABLE_FUZZILLI=ON -DHERMES_ENABLE_TRACE_PC_GUARD=ON $OTHER_FLAGS
+cmake .. -DHERMES_ENABLE_FUZZILLI=ON $OTHER_FLAGS
 make fuzzilli
 ```
 
