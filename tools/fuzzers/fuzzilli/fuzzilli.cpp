@@ -10,6 +10,13 @@
 
 #include <cstring>
 
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+
+
 using facebook::hermes::HermesRuntime;
 using facebook::hermes::makeHermesRuntime;
 using facebook::jsi::Function;
